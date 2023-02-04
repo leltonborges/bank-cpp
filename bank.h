@@ -4,15 +4,13 @@
 
 #include <iostream>
 #include <string>
-#include <ctime>
 #include <exception>
-
-unsigned long randNum(unsigned long limit, unsigned int ranger = 0);
+#include "OwnerAccount.h"
+#include "utils.h"
 
 class AccountBank {
 private:
-    std::string name{};
-    std::string cpf{};
+    OwnerAccount owner;
     unsigned long number{};
     unsigned long digit{};
     double balance{};
@@ -23,7 +21,9 @@ private:
 
 public:
     AccountBank() = delete;
-    AccountBank(std::string name, std::string cpf);
+
+    explicit AccountBank(OwnerAccount ownerAccount);
+
     ~AccountBank();
 
     void deposit(double balance);
@@ -33,6 +33,7 @@ public:
     [[nodiscard]] double getAmount() const;
 
     void transfer(AccountBank &bank, double amount);
+    std::string getAccount() const;
 
     static long numberAccounts();
 };

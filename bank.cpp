@@ -1,16 +1,18 @@
 #include "bank.h"
+
+#include <utility>
+
 long AccountBank::numAccount = 0;
 
-AccountBank::AccountBank(std::string name, std::string cpf):
-name(std::move(name)),
-cpf(std::move(cpf)),
-number(randNum(1000, 1000)),
-digit(randNum(100)),
-balance(0.0) {
+AccountBank::AccountBank(OwnerAccount ownerAccount):
+        owner(std::move(ownerAccount)),
+        number(randNum(1000, 1000)),
+        digit(randNum(100)),
+        balance(0.0) {
     numAccount++;
 }
 
-AccountBank::~AccountBank(){
+AccountBank::~AccountBank() {
     AccountBank::numAccount--;
 }
 
@@ -43,7 +45,6 @@ long AccountBank::numberAccounts() {
     return AccountBank::numAccount;
 }
 
-unsigned long randNum(const unsigned long limit, const unsigned int ranger) {
-    std::srand((unsigned) time(NULL));
-    return (rand() % limit) + ranger;
+std::string AccountBank::getAccount() const {
+    return std::to_string(this->number) + "-" + std::to_string(this->digit);
 }
