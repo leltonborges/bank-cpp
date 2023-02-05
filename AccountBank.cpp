@@ -1,4 +1,4 @@
-#include "bank.h"
+#include "AccountBank.h"
 
 #include <utility>
 
@@ -47,4 +47,13 @@ long AccountBank::numberAccounts() {
 
 std::string AccountBank::getAccount() const {
     return std::to_string(this->number) + "-" + std::to_string(this->digit);
+}
+
+double AccountBank::withdrawPlusRate(const double &amount) {
+    double amountPlusRate = this->valueRate() * amount;
+    return this->withdraw(amountPlusRate);
+}
+
+double AccountBank::valueRate() {
+    return 1.03;
 }

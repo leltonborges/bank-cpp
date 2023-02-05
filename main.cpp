@@ -1,4 +1,5 @@
-#include "bank.h"
+#include "AccountBank.h"
+#include "Employee.h"
 
 int main() {
 
@@ -15,5 +16,8 @@ int main() {
     }
 
     std::cout << "balace: " << accountOne.getAmount() << std::endl;
+
+    Employee employee("Lelton", "1111");
+    employee.
     return 0;
 }

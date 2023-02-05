@@ -10,7 +10,7 @@ private:
     std::string cpf{};
 
 public:
-    OwnerAccount(std::string name, std::string cpf);
+    explicit OwnerAccount(std::string name, std::string cpf);
 
     [[nodiscard]] std::string getName() const;
 

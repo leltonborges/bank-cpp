@@ -1,6 +1,6 @@
 #pragma once
-#ifndef BANK_BANK_H
-#define BANK_BANK_H
+#ifndef BANK_ACCOUNTBANK_H
+#define BANK_ACCOUNTBANK_H
 
 #include <iostream>
 #include <string>
@@ -19,6 +19,9 @@ private:
 
     [[nodiscard]] bool isAvailableBalance(double balance) const;
 
+
+    double withdraw(double balance) noexcept(false);
+
 public:
     AccountBank() = delete;
 
@@ -28,15 +31,18 @@ public:
 
     void deposit(double balance);
 
-    double withdraw(double balance) noexcept(false);
+    double withdrawPlusRate(const double &amount);
 
     [[nodiscard]] double getAmount() const;
 
     void transfer(AccountBank &bank, double amount);
-    std::string getAccount() const;
+
+    [[nodiscard]] std::string getAccount() const;
 
     static long numberAccounts();
+
+    virtual double valueRate();
 };
 
 
-#endif //BANK_BANK_H
+#endif //BANK_ACCOUNTBANK_H
