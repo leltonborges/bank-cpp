@@ -1,4 +1,4 @@
-#include "Person.h"
+#include "Person.hpp"
 
 Person::Person(std::string cpf, std::string name):
         cpf(std::move(cpf)),

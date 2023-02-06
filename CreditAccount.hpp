@@ -1,9 +1,9 @@
-#ifndef BANK_CREDITACCOUNT_H
-#define BANK_CREDITACCOUNT_H
+#ifndef BANK_CREDITACCOUNT_HPP
+#define BANK_CREDITACCOUNT_HPP
 #pragma  once
 
-#include "AccountBank.h"
-#include "OwnerAccount.h"
+#include "AccountBank.hpp"
+#include "OwnerAccount.hpp"
 
 class CreditAccount final :
         public AccountBank {

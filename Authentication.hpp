@@ -1,5 +1,5 @@
-#ifndef BANK_AUTHENTICATION_H
-#define BANK_AUTHENTICATION_H
+#ifndef BANK_AUTHENTICATION_HPP
+#define BANK_AUTHENTICATION_HPP
 #pragma once
 
 #include <string>

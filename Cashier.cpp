@@ -1,4 +1,4 @@
-#include "Cashier.h"
+#include "Cashier.hpp"
 
 float Cashier::bonus() const {
     return this->getSalary() * 1.1f;

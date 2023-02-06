@@ -1,12 +1,12 @@
-#ifndef BANK_MANAGER_H
-#define BANK_MANAGER_H
+#ifndef BANK_MANAGER_HPP
+#define BANK_MANAGER_HPP
 #pragma  once
 
 #include <string>
 #include <iostream>
 #include <utility>
-#include "Employee.h"
-#include "Authentication.h"
+#include "Employee.hpp"
+#include "Authentication.hpp"
 
 class Manager: public Employee, public Authentication{
 public:
@@ -16,4 +16,4 @@ public:
 };
 
 
-#endif //BANK_MANAGER_H
+#endif //BANK_MANAGER_HPP
