@@ -19,15 +19,14 @@ private:
 
     [[nodiscard]] bool isAvailableBalance(double balance) const;
 
-
     double withdraw(double balance) noexcept(false);
 
 public:
     AccountBank() = delete;
 
-    explicit AccountBank(OwnerAccount ownerAccount);
+    explicit AccountBank(OwnerAccount &ownerAccount);
 
-    ~AccountBank();
+    virtual ~AccountBank();
 
     void deposit(double balance);
 
@@ -41,7 +40,7 @@ public:
 
     static long numberAccounts();
 
-    virtual double valueRate();
+    [[nodiscard]] virtual double valueRate() const = 0;
 };
 
 

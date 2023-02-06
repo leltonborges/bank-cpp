@@ -4,7 +4,7 @@
 
 long AccountBank::numAccount = 0;
 
-AccountBank::AccountBank(OwnerAccount ownerAccount):
+AccountBank::AccountBank(OwnerAccount &ownerAccount):
         owner(std::move(ownerAccount)),
         number(randNum(1000, 1000)),
         digit(randNum(100)),
@@ -52,8 +52,4 @@ std::string AccountBank::getAccount() const {
 double AccountBank::withdrawPlusRate(const double &amount) {
     double amountPlusRate = this->valueRate() * amount;
     return this->withdraw(amountPlusRate);
-}
-
-double AccountBank::valueRate() {
-    return 1.03;
 }
