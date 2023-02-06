@@ -1,5 +1,6 @@
 #ifndef BANK_EMPLOYEE_H
 #define BANK_EMPLOYEE_H
+#pragma  once
 
 #include <string>
 #include <iostream>

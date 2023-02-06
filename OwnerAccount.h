@@ -1,5 +1,6 @@
 #ifndef BANK_OWNERACCOUNT_H
 #define BANK_OWNERACCOUNT_H
+#pragma  once
 
 #include <iostream>
 #include <string>

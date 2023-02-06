@@ -4,6 +4,7 @@
 
 #ifndef BANK_PERSON_H
 #define BANK_PERSON_H
+#pragma  once
 
 #include <string>
 #include <iostream>

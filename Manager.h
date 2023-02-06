@@ -1,7 +1,3 @@
-//
-// Created by leltonborges on 05/02/23.
-//
-
 #ifndef BANK_MANAGER_H
 #define BANK_MANAGER_H
 #pragma  once

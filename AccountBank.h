@@ -9,6 +9,8 @@
 #include "OwnerAccount.h"
 #include "utils.h"
 
+#pragma  once
+
 class AccountBank {
 private:
     OwnerAccount owner;

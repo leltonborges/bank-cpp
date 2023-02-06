@@ -1,5 +1,6 @@
 #ifndef BANK_DEBITACCOUNT_H
 #define BANK_DEBITACCOUNT_H
+#pragma  once
 
 #include "AccountBank.h"
 #include "OwnerAccount.h"
