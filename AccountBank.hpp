@@ -1,13 +1,13 @@
 #pragma once
-#ifndef BANK_ACCOUNTBANK_H
-#define BANK_ACCOUNTBANK_H
+#ifndef BANK_ACCOUNTBANK_HPP
+#define BANK_ACCOUNTBANK_HPP
 
 #include <iostream>
 #include <string>
 #include <exception>
 #include <utility>
-#include "OwnerAccount.h"
-#include "utils.h"
+#include "OwnerAccount.hpp"
+#include "utils.hpp"
 
 #pragma  once
 
@@ -47,4 +47,4 @@ public:
 };
 
 
-#endif //BANK_ACCOUNTBANK_H
+#endif //BANK_ACCOUNTBANK_HPP

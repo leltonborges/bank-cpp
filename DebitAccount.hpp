@@ -1,9 +1,9 @@
-#ifndef BANK_DEBITACCOUNT_H
-#define BANK_DEBITACCOUNT_H
+#ifndef BANK_DEBITACCOUNT_HPP
+#define BANK_DEBITACCOUNT_HPP
 #pragma  once
 
-#include "AccountBank.h"
-#include "OwnerAccount.h"
+#include "AccountBank.hpp"
+#include "OwnerAccount.hpp"
 
 class DebitAccount final : public AccountBank {
 public:
@@ -15,4 +15,4 @@ public:
 };
 
 
-#endif //BANK_DEBITACCOUNT_H
+#endif //BANK_DEBITACCOUNT_HPP
