@@ -2,8 +2,8 @@
 // Created by leltonborges on 04/02/23.
 //
 
-#ifndef BANK_PERSON_H
-#define BANK_PERSON_H
+#ifndef BANK_PERSON_HPP
+#define BANK_PERSON_HPP
 #pragma  once
 
 #include <string>
@@ -26,4 +26,4 @@ public:
 };
 
 
-#endif //BANK_PERSON_H
+#endif //BANK_PERSON_HPP

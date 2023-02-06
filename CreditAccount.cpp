@@ -1,4 +1,4 @@
-#include "CreditAccount.h"
+#include "CreditAccount.hpp"
 
 double CreditAccount::valueRate() const {
     return 1.05;

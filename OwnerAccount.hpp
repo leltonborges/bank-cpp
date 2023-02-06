@@ -1,5 +1,5 @@
-#ifndef BANK_OWNERACCOUNT_H
-#define BANK_OWNERACCOUNT_H
+#ifndef BANK_OWNERACCOUNT_HPP
+#define BANK_OWNERACCOUNT_HPP
 #pragma  once
 
 #include <iostream>
@@ -18,4 +18,4 @@ public:
     [[nodiscard]] std::string getCpf() const;
 };
 
-#endif //BANK_OWNERACCOUNT_H
+#endif //BANK_OWNERACCOUNT_HPP

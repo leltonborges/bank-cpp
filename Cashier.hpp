@@ -1,11 +1,11 @@
-#ifndef BANK_CASHIER_H
-#define BANK_CASHIER_H
+#ifndef BANK_CASHIER_HPP
+#define BANK_CASHIER_HPP
 #pragma  once
 
 #include <string>
 #include <iostream>
 #include <utility>
-#include "Employee.h"
+#include "Employee.hpp"
 
 
 class Cashier :
@@ -17,4 +17,4 @@ public:
 };
 
 
-#endif //BANK_CASHIER_H
+#endif //BANK_CASHIER_HPP

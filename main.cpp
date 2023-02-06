@@ -1,7 +1,7 @@
-#include "AccountBank.h"
-#include "CreditAccount.h"
-#include "DebitAccount.h"
-#include "Manager.h"
+#include "AccountBank.hpp"
+#include "CreditAccount.hpp"
+#include "DebitAccount.hpp"
+#include "Manager.hpp"
 
 int main() {
 
