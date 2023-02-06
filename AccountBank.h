@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <exception>
+#include <utility>
 #include "OwnerAccount.h"
 #include "utils.h"
 
@@ -30,7 +31,7 @@ public:
 
     void deposit(double balance);
 
-    double withdrawPlusRate(const double &amount);
+    double withdrawPlusRate(const double &amount) noexcept(false);
 
     [[nodiscard]] double getAmount() const;
 

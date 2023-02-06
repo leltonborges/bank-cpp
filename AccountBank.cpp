@@ -1,7 +1,5 @@
 #include "AccountBank.h"
 
-#include <utility>
-
 long AccountBank::numAccount = 0;
 
 AccountBank::AccountBank(OwnerAccount &ownerAccount):

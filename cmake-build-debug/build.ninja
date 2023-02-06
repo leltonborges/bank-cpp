@@ -91,8 +91,26 @@ build CMakeFiles/bank.dir/CreditAccount.cpp.o: CXX_COMPILER__bank_Debug /home/le
   OBJECT_DIR = CMakeFiles/bank.dir
   OBJECT_FILE_DIR = CMakeFiles/bank.dir
 
-build CMakeFiles/bank.dir/DebitedAccount.cpp.o: CXX_COMPILER__bank_Debug /home/lelton/CLionProjects/C++/bank/DebitedAccount.cpp || cmake_object_order_depends_target_bank
-  DEP_FILE = CMakeFiles/bank.dir/DebitedAccount.cpp.o.d
+build CMakeFiles/bank.dir/DebitAccount.cpp.o: CXX_COMPILER__bank_Debug /home/lelton/CLionProjects/C++/bank/DebitAccount.cpp || cmake_object_order_depends_target_bank
+  DEP_FILE = CMakeFiles/bank.dir/DebitAccount.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  OBJECT_DIR = CMakeFiles/bank.dir
+  OBJECT_FILE_DIR = CMakeFiles/bank.dir
+
+build CMakeFiles/bank.dir/Cashier.cpp.o: CXX_COMPILER__bank_Debug /home/lelton/CLionProjects/C++/bank/Cashier.cpp || cmake_object_order_depends_target_bank
+  DEP_FILE = CMakeFiles/bank.dir/Cashier.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  OBJECT_DIR = CMakeFiles/bank.dir
+  OBJECT_FILE_DIR = CMakeFiles/bank.dir
+
+build CMakeFiles/bank.dir/Manager.cpp.o: CXX_COMPILER__bank_Debug /home/lelton/CLionProjects/C++/bank/Manager.cpp || cmake_object_order_depends_target_bank
+  DEP_FILE = CMakeFiles/bank.dir/Manager.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  OBJECT_DIR = CMakeFiles/bank.dir
+  OBJECT_FILE_DIR = CMakeFiles/bank.dir
+
+build CMakeFiles/bank.dir/Authentication.cpp.o: CXX_COMPILER__bank_Debug /home/lelton/CLionProjects/C++/bank/Authentication.cpp || cmake_object_order_depends_target_bank
+  DEP_FILE = CMakeFiles/bank.dir/Authentication.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++23
   OBJECT_DIR = CMakeFiles/bank.dir
   OBJECT_FILE_DIR = CMakeFiles/bank.dir
@@ -105,7 +123,7 @@ build CMakeFiles/bank.dir/DebitedAccount.cpp.o: CXX_COMPILER__bank_Debug /home/l
 #############################################
 # Link the executable bank
 
-build bank: CXX_EXECUTABLE_LINKER__bank_Debug CMakeFiles/bank.dir/main.cpp.o CMakeFiles/bank.dir/AccountBank.cpp.o CMakeFiles/bank.dir/OwnerAccount.cpp.o CMakeFiles/bank.dir/utils.cpp.o CMakeFiles/bank.dir/Employee.cpp.o CMakeFiles/bank.dir/Person.cpp.o CMakeFiles/bank.dir/CreditAccount.cpp.o CMakeFiles/bank.dir/DebitedAccount.cpp.o
+build bank: CXX_EXECUTABLE_LINKER__bank_Debug CMakeFiles/bank.dir/main.cpp.o CMakeFiles/bank.dir/AccountBank.cpp.o CMakeFiles/bank.dir/OwnerAccount.cpp.o CMakeFiles/bank.dir/utils.cpp.o CMakeFiles/bank.dir/Employee.cpp.o CMakeFiles/bank.dir/Person.cpp.o CMakeFiles/bank.dir/CreditAccount.cpp.o CMakeFiles/bank.dir/DebitAccount.cpp.o CMakeFiles/bank.dir/Cashier.cpp.o CMakeFiles/bank.dir/Manager.cpp.o CMakeFiles/bank.dir/Authentication.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/bank.dir
   POST_BUILD = :

@@ -1,8 +1,8 @@
-//
-// Created by leltonborges on 04/02/23.
-//
-
 #include "Employee.h"
 
-[[maybe_unused]] Employee::Employee(std::string name, std::string cpf):
-Person(std::move(cpf), std::move(name)) {}
+[[maybe_unused]] Employee::Employee(std::string name, std::string cpf, float salary):
+Person(std::move(cpf), std::move(name)), salary(salary) {}
+
+float Employee::getSalary() const {
+    return this->salary;
+}
