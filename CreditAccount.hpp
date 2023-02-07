@@ -11,6 +11,9 @@ public:
     [[nodiscard]] double valueRate() const override;
 
     explicit CreditAccount(OwnerAccount ownerAccount);
+
+//    void operator+=(float amount);
+    void operator+=(CreditAccount &mainAccount);
 };
 
 #endif

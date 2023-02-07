@@ -43,6 +43,8 @@ public:
 
     static long numberAccounts();
 
+    void operator+=(float amount);
+
     [[nodiscard]] virtual double valueRate() const = 0;
 };
 

@@ -6,3 +6,13 @@ double CreditAccount::valueRate() const {
 
 CreditAccount::CreditAccount(OwnerAccount ownerAccount):
         AccountBank(ownerAccount) {}
+
+void CreditAccount::operator+=(CreditAccount &mainAccount) {
+    double amount = mainAccount.getAmount() / 2;
+    this->deposit(amount);
+    mainAccount.withdrawPlusRate(amount);
+}
+
+//void CreditAccount::operator+=(float amount) {
+//    AccountBank::operator+=(amount);
+//}

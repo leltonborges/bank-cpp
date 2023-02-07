@@ -8,11 +8,29 @@ int main() {
     OwnerAccount ownerAccount = OwnerAccount("Lelton", "1111");
 
     DebitAccount accountOne(OwnerAccount(std::string("Lelton"), std::string("1111")));
+    CreditAccount creditAccount(OwnerAccount(std::string("Lia"), std::string("2222")));
+    CreditAccount otherCreditAccount(OwnerAccount(std::string("Lelton"), std::string("3333")));
+
+    (AccountBank &) creditAccount += 20;
+
+    otherCreditAccount.deposit(100);
+    creditAccount.deposit(10);
+    std::cout << "Before " << std::endl;
+    std::cout << "Origin creditAcount: " << creditAccount.getAmount() << std::endl;
+    std::cout << "Origin otherCreditAcount: " << otherCreditAccount.getAmount() << std::endl;
+
+    creditAccount += otherCreditAccount;
+
+    std::cout << "After " << std::endl;
+    std::cout << "Origin creditAcount: " << creditAccount.getAmount() << std::endl;
+    std::cout << "Origin otherCreditAcount: " << otherCreditAccount.getAmount() << std::endl;
+
 
     accountOne.deposit(100);
-    accountOne.withdrawPlusRate(10);
+    accountOne += 20;
 
     std::cout << "balace: " << accountOne.getAmount() << std::endl;
+
     try {
         accountOne.withdrawPlusRate(10);
 

@@ -51,3 +51,7 @@ double AccountBank::withdrawPlusRate(const double &amount) {
     double amountPlusRate = this->valueRate() * amount;
     return this->withdraw(amountPlusRate);
 }
+
+void AccountBank::operator+=(float amount) {
+    this->deposit(amount);
+}
