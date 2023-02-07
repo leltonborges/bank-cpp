@@ -5,7 +5,7 @@
 1	611	1675651319577320242	CMakeFiles/bank.dir/main.cpp.o	4d47ba488e728f0e
 611	722	1675651319687320727	bank	8965576c0d120bef
 1	876	1675555663269077049	CMakeFiles/bank.dir/bank.cpp.o	2f36f7da4e26953d
-0	27	1675652515151539063	build.ninja	189f0bc6ae0c4bdd
+0	27	1675728144774993315	build.ninja	189f0bc6ae0c4bdd
 623	1201	1675651149387570798	CMakeFiles/bank.dir/CreditAccount.cpp.o	bbd9770fbb5ce4bc
 980	1037	1675531140665678530	CMakeFiles/bank.dir/utils.cpp.o	dcfba29885fa4bfd
 1	1010	1675644006798536046	CMakeFiles/bank.dir/DebitedAccount.cpp.o	a499cc1c6ac75eae

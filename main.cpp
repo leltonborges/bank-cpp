@@ -22,7 +22,7 @@ int main() {
 
     std::cout << "balace: " << accountOne.getAmount() << std::endl;
 
-    Manager manager("Lelton", "123", "login", "123", 5000);
+    Manager manager("Lelton", "123", "login", "123", 5000, PaymentDay::SANDAY);
 
     if (manager.authenticate()) {
         std::cout << "Logado" << std::endl;

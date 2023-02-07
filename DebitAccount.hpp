@@ -14,5 +14,4 @@ public:
     [[nodiscard]] double valueRate() const override;
 };
 
-
 #endif //BANK_DEBITACCOUNT_HPP

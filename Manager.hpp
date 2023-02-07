@@ -10,7 +10,7 @@
 
 class Manager: public Employee, public Authentication{
 public:
- explicit Manager(std::string name, std::string cpf,std::string login,std::string pass, float salary);
+ explicit Manager(std::string name, std::string cpf, std::string login, std::string pass, float salary, PaymentDay payDay);
 
     [[nodiscard]] float bonus() const override;
 };

@@ -11,7 +11,7 @@
 class Cashier :
         public Employee {
 public:
-    Cashier(std::string name, std::string cpf, float salary);
+    Cashier(std::string name, std::string cpf, float salary, PaymentDay payDay);
 
     [[nodiscard]] float bonus() const override;
 };

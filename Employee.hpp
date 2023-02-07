@@ -7,17 +7,26 @@
 #include <utility>
 #include "Person.hpp"
 
-class Employee : public Person {
+enum class PaymentDay :
+        unsigned short int {
+    MONDAY = 1, TUESDAY = 2, WEDNESDAY = 3, THURSDAY = 4, FRIDAY = 5, SATURDAY = 6, SANDAY = 7
+};
+
+class Employee :
+        public Person {
 private:
     std::string name{};
     std::string cpf{};
     float salary{};
+    PaymentDay payDay{};
 public:
-    explicit Employee(std::string name, std::string cpf, float salary);
+    explicit Employee(std::string name, std::string cpf, float salary, PaymentDay payDay);
 
-    virtual float bonus() const = 0;
+    [[nodiscard]] virtual float bonus() const = 0;
 
     [[nodiscard]] float getSalary() const;
+
+    [[nodiscard]] PaymentDay getPayDay() const;
 
 };
 
