@@ -43,9 +43,10 @@ public:
 
     static long numberAccounts();
 
-    void operator+=(float amount);
-
     [[nodiscard]] virtual double valueRate() const = 0;
+
+    void operator+=(float amount);
+    friend std::ostream& operator<<(std::ostream &osCout, const AccountBank &accountBank);
 };
 
 

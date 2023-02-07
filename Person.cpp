@@ -1,6 +1,6 @@
 #include "Person.hpp"
 
-Person::Person(std::string cpf, std::string name):
+Person::Person(std::string name, std::string cpf):
         cpf(std::move(cpf)),
         name(std::move(name)) {}
 

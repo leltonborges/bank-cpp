@@ -4,18 +4,12 @@
 
 #include <iostream>
 #include <string>
+#include "Person.hpp"
 
-class OwnerAccount {
-private:
-    std::string name{};
-    std::string cpf{};
-
+class OwnerAccount :
+        public Person {
 public:
     explicit OwnerAccount(std::string name, std::string cpf);
-
-    [[nodiscard]] std::string getName() const;
-
-    [[nodiscard]] std::string getCpf() const;
 };
 
 #endif //BANK_OWNERACCOUNT_HPP

@@ -2,49 +2,62 @@
 #include "CreditAccount.hpp"
 #include "DebitAccount.hpp"
 #include "Manager.hpp"
+#include "utils.hpp"
+
+using namespace std;
+
+ostream& operator<<(ostream &osCout, const AccountBank &accountBank){
+    osCout << "Conta (Operador): " << accountBank.getAccount() << endl;
+    osCout << "Titular (Operador): " << accountBank.owner.getName() << endl;
+    osCout << "O saldo da conta (Operador): " << accountBank.getAmount() << endl;
+    osCout << "O saldo taxa (Operador): " << accountBank.valueRate() << endl;
+    return osCout;
+}
 
 int main() {
 
     OwnerAccount ownerAccount = OwnerAccount("Lelton", "1111");
 
-    DebitAccount accountOne(OwnerAccount(std::string("Lelton"), std::string("1111")));
-    CreditAccount creditAccount(OwnerAccount(std::string("Lia"), std::string("2222")));
-    CreditAccount otherCreditAccount(OwnerAccount(std::string("Lelton"), std::string("3333")));
+    DebitAccount accountOne(OwnerAccount(string("Lelton"), string("1111")));
+    CreditAccount creditAccount(OwnerAccount(string("Lia"), string("2222")));
+    CreditAccount otherCreditAccount(OwnerAccount(string("Lelton"), string("3333")));
 
     (AccountBank &) creditAccount += 20;
 
     otherCreditAccount.deposit(100);
     creditAccount.deposit(10);
-    std::cout << "Before " << std::endl;
-    std::cout << "Origin creditAcount: " << creditAccount.getAmount() << std::endl;
-    std::cout << "Origin otherCreditAcount: " << otherCreditAccount.getAmount() << std::endl;
+    cout << "Before " << endl;
+    cout << "Origin creditAcount: " << endl;
+    cout <<  creditAccount << endl;
+    cout << "Origin otherCreditAcount: " << endl;
+    cout <<  otherCreditAccount << endl;
 
     creditAccount += otherCreditAccount;
 
-    std::cout << "After " << std::endl;
-    std::cout << "Origin creditAcount: " << creditAccount.getAmount() << std::endl;
-    std::cout << "Origin otherCreditAcount: " << otherCreditAccount.getAmount() << std::endl;
+    cout << "After " << endl;
+    cout << "Origin creditAcount: " << creditAccount.getAmount() << endl;
+    cout << "Origin otherCreditAcount: " << otherCreditAccount.getAmount() << endl;
 
 
     accountOne.deposit(100);
     accountOne += 20;
 
-    std::cout << "balace: " << accountOne.getAmount() << std::endl;
+    cout << "balace: " << accountOne.getAmount() << endl;
 
     try {
         accountOne.withdrawPlusRate(10);
 
-    } catch (std::invalid_argument const &ex) {
-        std::cout << "Message: " << ex.what() << std::endl;
+    } catch (invalid_argument const &ex) {
+        cout << "Message: " << ex.what() << endl;
     }
 
-    std::cout << "balace: " << accountOne.getAmount() << std::endl;
+    cout << "balace: " << accountOne.getAmount() << endl;
 
     Manager manager("Lelton", "123", "login", "123", 5000, PaymentDay::SANDAY);
 
     if (manager.authenticate()) {
-        std::cout << "Logado" << std::endl;
-        std::cout << "Salary: " << manager.bonus() << std::endl;
+        cout << "Logado" << endl;
+        cout << "Salary: " << manager.bonus() << endl;
     }
     return 0;
 }
