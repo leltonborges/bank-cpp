@@ -9,6 +9,7 @@ using namespace std;
 ostream& operator<<(ostream &osCout, const AccountBank &accountBank){
     osCout << "Conta (Operador): " << accountBank.getAccount() << endl;
     osCout << "Titular (Operador): " << accountBank.owner.getName() << endl;
+    osCout << "Documento (Operador): " << accountBank.owner.getCpf() << endl;
     osCout << "O saldo da conta (Operador): " << accountBank.getAmount() << endl;
     osCout << "O saldo taxa (Operador): " << accountBank.valueRate() << endl;
     return osCout;

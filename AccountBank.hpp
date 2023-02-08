@@ -12,6 +12,13 @@
 #pragma  once
 
 class AccountBank {
+public:
+    enum ResultWithdraw{
+        SUCCESS,
+        NEGATIVE,
+        INSUFICIENT
+    };
+
 private:
     OwnerAccount owner;
     unsigned long number{};
@@ -22,7 +29,7 @@ private:
 
     [[nodiscard]] bool isAvailableBalance(double balance) const;
 
-    double withdraw(double balance) noexcept(false);
+    std::pair<AccountBank::ResultWithdraw,double> withdraw(double balance) noexcept(false);
 
 public:
     AccountBank() = delete;
@@ -33,7 +40,7 @@ public:
 
     void deposit(double balance);
 
-    double withdrawPlusRate(const double &amount) noexcept(false);
+    std::pair<ResultWithdraw,double> withdrawPlusRate(const double &amount) noexcept(false);
 
     [[nodiscard]] double getAmount() const;
 
