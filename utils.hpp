@@ -4,6 +4,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <iostream>
+#include <optional>
 
 unsigned long randNum(unsigned long limit, unsigned int ranger = 0);
 
