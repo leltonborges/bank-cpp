@@ -22,13 +22,13 @@ bool AccountBank::isAvailableBalance(const double amount) const {
     return this->balance >= amount;
 }
 
-std::pair<AccountBank::ResultWithdraw, double> AccountBank::withdraw(const double amount) {
-    if (amount > 0)
-        return std::make_pair(NEGATIVE, this->getAmount());
+std::variant<AccountBank::ResultWithdraw, double> AccountBank::withdraw(const double amount) {
+    if (amount < 0)
+        return NEGATIVE;
     else if (this->isAvailableBalance(amount)) {
         this->balance -= amount;
-        return std::make_pair(SUCCESS, this->getAmount());
-    } else return std::make_pair(INSUFICIENT, this->getAmount());
+        return this->getAmount();
+    } else return INSUFICIENT;
 //    else throw std::invalid_argument("Insufficient balace for withdraw");
 
 }
@@ -50,7 +50,7 @@ std::string AccountBank::getAccount() const {
     return std::to_string(this->number) + "-" + std::to_string(this->digit);
 }
 
-std::pair<AccountBank::ResultWithdraw, double> AccountBank::withdrawPlusRate(const double &amount) {
+std::variant<AccountBank::ResultWithdraw, double> AccountBank::withdrawPlusRate(const double &amount) {
     double amountPlusRate = this->valueRate() * amount;
     return this->withdraw(amountPlusRate);
 }

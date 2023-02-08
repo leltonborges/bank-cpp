@@ -6,6 +6,7 @@
 #include <string>
 #include <exception>
 #include <utility>
+#include <variant>
 #include "OwnerAccount.hpp"
 #include "utils.hpp"
 
@@ -29,7 +30,7 @@ private:
 
     [[nodiscard]] bool isAvailableBalance(double balance) const;
 
-    std::pair<AccountBank::ResultWithdraw,double> withdraw(double balance) noexcept(false);
+    std::variant<AccountBank::ResultWithdraw,double> withdraw(double balance) noexcept(false);
 
 public:
     AccountBank() = delete;
@@ -40,7 +41,7 @@ public:
 
     void deposit(double balance);
 
-    std::pair<ResultWithdraw,double> withdrawPlusRate(const double &amount) noexcept(false);
+    std::variant<ResultWithdraw,double> withdrawPlusRate(const double &amount) noexcept(false);
 
     [[nodiscard]] double getAmount() const;
 

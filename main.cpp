@@ -6,7 +6,7 @@
 
 using namespace std;
 
-ostream& operator<<(ostream &osCout, const AccountBank &accountBank){
+ostream &operator<<(ostream &osCout, const AccountBank &accountBank) {
     osCout << "Conta (Operador): " << accountBank.getAccount() << endl;
     osCout << "Titular (Operador): " << accountBank.owner.getName() << endl;
     osCout << "Documento (Operador): " << accountBank.owner.getCpf() << endl;
@@ -29,9 +29,9 @@ int main() {
     creditAccount.deposit(10);
     cout << "Before " << endl;
     cout << "Origin creditAcount: " << endl;
-    cout <<  creditAccount << endl;
+    cout << creditAccount << endl;
     cout << "Origin otherCreditAcount: " << endl;
-    cout <<  otherCreditAccount << endl;
+    cout << otherCreditAccount << endl;
 
     creditAccount += otherCreditAccount;
 
@@ -39,17 +39,17 @@ int main() {
     cout << "Origin creditAcount: " << creditAccount.getAmount() << endl;
     cout << "Origin otherCreditAcount: " << otherCreditAccount.getAmount() << endl;
 
-
     accountOne.deposit(100);
     accountOne += 20;
 
     cout << "balace: " << accountOne.getAmount() << endl;
 
-    try {
-        accountOne.withdrawPlusRate(10);
-
-    } catch (invalid_argument const &ex) {
-        cout << "Message: " << ex.what() << endl;
+    auto variant = accountOne.withdrawPlusRate(520);
+//    auto anAuto = std::get_if<double>(&variant);
+    if (variant.index()) {
+        cout << "Sacar: " << accountOne.getAmount() << endl;
+    } else{
+        cout << "Erro ao sacar: " << accountOne.getAmount() << endl;
     }
 
     cout << "balace: " << accountOne.getAmount() << endl;
