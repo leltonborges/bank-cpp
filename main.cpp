@@ -15,6 +15,10 @@ ostream &operator<<(ostream &osCout, const AccountBank &accountBank) {
     return osCout;
 }
 
+//AccountBank &menor(AccountBank &accountA, AccountBank &accountB) {
+//    return accountA < accountB ? accountA : accountB;
+//}
+
 int main() {
 
     OwnerAccount ownerAccount = OwnerAccount("Lelton", "1111");
@@ -48,7 +52,7 @@ int main() {
 //    auto anAuto = std::get_if<double>(&variant);
     if (variant.index()) {
         cout << "Sacar: " << accountOne.getAmount() << endl;
-    } else{
+    } else {
         cout << "Erro ao sacar: " << accountOne.getAmount() << endl;
     }
 
@@ -60,5 +64,7 @@ int main() {
         cout << "Logado" << endl;
         cout << "Salary: " << manager.bonus() << endl;
     }
+
+    cout << "Menor conta: " << menor<AccountBank&>(creditAccount, otherCreditAccount).getAmount() << endl;
     return 0;
 }

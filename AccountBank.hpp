@@ -54,6 +54,7 @@ public:
     [[nodiscard]] virtual double valueRate() const = 0;
 
     void operator+=(float amount);
+    bool operator<(const AccountBank &accountBank) const;
     friend std::ostream& operator<<(std::ostream &osCout, const AccountBank &accountBank);
 };
 

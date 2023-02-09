@@ -58,3 +58,7 @@ std::variant<AccountBank::ResultWithdraw, double> AccountBank::withdrawPlusRate(
 void AccountBank::operator+=(float amount) {
     this->deposit(amount);
 }
+
+bool AccountBank::operator<(const AccountBank &accountBank) const {
+    return this->getAmount() < accountBank.getAmount();
+}
