@@ -18,7 +18,9 @@ private:
     T document;
     std::string name{};
 public:
-    Pessoa(T document, std::string name): document(document), name(std::move(name)){}
+    Pessoa(T document, std::string name):
+            document(document),
+            name(std::move(name)) {}
 
     [[nodiscard]] T getDocument() const {
         return this->document;
@@ -29,11 +31,24 @@ public:
     }
 };
 
-class Funcionario: public Pessoa<std::string>{
+class Funcionario :
+        public Pessoa<std::string> {
 public:
     explicit Funcionario(std::string document, std::string name);
 };
 
+template<int percentualTarifa>
+class Conta {
+public:
+    float getValue(float balance) {
+        return balance * percentualTarifa;
+    }
+};
+
+class ContaCorrente :
+        public Conta<5> {
+
+};
 
 unsigned long randNum(unsigned long limit, unsigned int ranger = 0);
 
